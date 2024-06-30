@@ -43,7 +43,9 @@ export class Web3TokenInformationService implements OnModuleInit {
     const accessKey = `accessKey:${accessKeyData.key}`;
     const expireAt = accessKeyData.expireAt;
     const expireAtDate = new Date(expireAt);
-    this.redisClient.setex(accessKey, Math.floor((expireAtDate.getTime() - Date.now()) / 1000), JSON.stringify(accessKeyData));
+    // Access Key management service implements soft deletion, so we need to check if the access key has expired
+    // and since redis cannot take a negative value for the expiration time, we need to set it to at least 1 second
+    this.redisClient.setex(accessKey, Math.max(Math.floor((expireAtDate.getTime() - Date.now()) / 1000), 1), JSON.stringify(accessKeyData));
   }
 
   async getWeb3TokenInformation(): Promise<any> {
