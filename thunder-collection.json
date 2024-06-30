@@ -1,0 +1,28 @@
+{
+    "clientName": "Thunder Client",
+    "collectionName": "Web3TokenInformationService",
+    "collectionId": "f894ca3f-b7ed-443b-bf75-8ad17f273024",
+    "dateExported": "2024-06-30T20:19:58.474Z",
+    "version": "1.2",
+    "folders": [],
+    "requests": [
+        {
+            "_id": "79a79535-f4b5-477a-b779-7187cbeee3c6",
+            "colId": "f894ca3f-b7ed-443b-bf75-8ad17f273024",
+            "containerId": "",
+            "name": "Get Web3 Token Information",
+            "url": "localhost:3001/web3-token-information",
+            "method": "GET",
+            "sortNum": 10000,
+            "created": "2024-06-28T22:10:08.726Z",
+            "modified": "2024-06-30T10:33:00.960Z",
+            "headers": [
+                {
+                    "name": "Authorization",
+                    "value": "f14f06ab-b295-4a1b-a2bc-422d47108eac"
+                }
+            ]
+        }
+    ],
+    "ref": "3ibnVxmTypYOXV0rJD3RZXl_ElIslpaCOwahBS-FicwJK2mHr-UWb8DLSWigcKZxeAIHF9VagTTblHZxfjIjDw"
+}
