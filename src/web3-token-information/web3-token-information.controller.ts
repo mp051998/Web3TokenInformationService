@@ -1,4 +1,4 @@
-import { Controller, Get, Headers } from '@nestjs/common';
+import { Controller, Get } from '@nestjs/common';
 
 import { Web3TokenInformationService } from './web3-token-information.service';
 
@@ -8,9 +8,8 @@ export class Web3TokenInformationController {
   constructor(private readonly web3TokenInformationService: Web3TokenInformationService) { }
 
   @Get('/')
-  async getWeb3TokenInformation(@Headers('Authorization') accessKey: string): Promise<any> {
-    console.log(accessKey); // This will log the Authorization header value
-    return this.web3TokenInformationService.getWeb3TokenInformation(accessKey);
+  async getWeb3TokenInformation(): Promise<any> {
+    return this.web3TokenInformationService.getWeb3TokenInformation();
   }
 
 }
