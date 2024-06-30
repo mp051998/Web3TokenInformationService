@@ -67,7 +67,12 @@ export class AuthMiddleware implements NestMiddleware {
     // Check if the token is valid
     const accessKeyData = await this.getAccessToken(authToken);
     if (!accessKeyData) {
-      throw new ForbiddenException('Invalid authentication token');
+      throw new ForbiddenException('Invalid access token');
+    }
+
+    // Check if the token is active
+    if (!accessKeyData.active) {
+      throw new ForbiddenException('Inactive access token');
     }
 
     // Now check the rate limits
