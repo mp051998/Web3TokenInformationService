@@ -34,3 +34,7 @@ $ npm run test:e2e
 # test coverage
 $ npm run test:cov
 ```
+
+## API Collection (Thunder Client):
+
+Can be found [here](./thunder-collection.json)
