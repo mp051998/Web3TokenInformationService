@@ -58,7 +58,6 @@ export class AuthMiddleware implements NestMiddleware {
   }
 
   async use(req: Request, res: Response, next: NextFunction) {
-    console.log(req.headers);
     const authToken = req.headers.authorization.toString();
     if (!authToken) {
       throw new ForbiddenException('Authentication token is required');
