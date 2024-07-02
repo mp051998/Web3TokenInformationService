@@ -2,6 +2,7 @@
 ## Description
 
 Nest app which can be used to fetch web3 token information while also enforcing rate limitting on the requests by communicating with an access-key-management microservice.
+This app works alongside an other app which provides access key management like the [access key management service](AccessKeyManagementService).
 
 ## Installation
 
